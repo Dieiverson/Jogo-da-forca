@@ -1,0 +1,17 @@
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\bin\Debug\JogoDaForca.Model.dll.config
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\bin\Debug\JogoDaForca.Model.dll
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\bin\Debug\JogoDaForca.Model.pdb
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\bin\Debug\EntityFramework.dll
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\bin\Debug\System.Data.SQLite.dll
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\bin\Debug\EntityFramework.xml
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\bin\Debug\System.Data.SQLite.xml
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\obj\Debug\JogoDaForca.Model.csprojAssemblyReference.cache
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\obj\Debug\JogoDaForca.Model.csproj.CoreCompileInputs.cache
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\obj\Debug\JogoDaForca.Model.csproj.CopyComplete
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\obj\Debug\JogoDaForca.Model.dll
+C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoDaForca.Model\obj\Debug\JogoDaForca.Model.pdb
