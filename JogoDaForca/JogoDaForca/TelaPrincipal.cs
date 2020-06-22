@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using JogoDaForca.Model;
 using JogoDaForca.Controller;
+using System.IO;
 
 namespace JogoDaForca
 {
@@ -22,6 +23,8 @@ namespace JogoDaForca
         int pontos, contador;
         string[] letrasDigitadas = new string[24];
         bool colocarTraco;
+        bool letraExiste = false;
+        int imagemIndex = 1;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -33,43 +36,78 @@ namespace JogoDaForca
             }
 
             lbl_LetrasDigitadas.Text = "Letras Digitadas:\n";
+            button2.Enabled = true;
            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            colocarTraco = true;
-            letrasDigitadas[contador] = txt_DigitaLetra.Text.ToUpper();
-            lbl_LetrasDigitadas.Text += " " +  txt_DigitaLetra.Text.ToUpper();
+            letraExiste = false;
+            lbl_LetrasDigitadas.Text += "-" +  txt_DigitaLetra.Text.ToUpper();
             lbl_Palavra.Text = "";
             for (int i = 0; i < _palavra.PalavraAtual.Length; i++)
             {
-                if(txt_DigitaLetra.Text.ToUpper() == _palavra.PalavraAtual.Substring(i,1))
+                colocarTraco = true;
+                if (txt_DigitaLetra.Text.ToUpper() == _palavra.PalavraAtual.Substring(i,1))
                 {
                     colocarTraco = false;
                     pontos++;
+                    letraExiste = true;
                     lbl_Palavra.Text += " " + _palavra.PalavraAtual.Substring(i, 1);
-                }               
-                for (int h = 0; h < letrasDigitadas.Length; h++)
+                } 
+                else
                 {
-                    if (letrasDigitadas[h] == _palavra.PalavraAtual.Substring(i, 1) & colocarTraco)
+                    for (int h = 0; h < letrasDigitadas.Length; h++)
                     {
-                        colocarTraco = false;
-                        lbl_Palavra.Text += " " + _palavra.PalavraAtual.Substring(i, 1);
+                        if (letrasDigitadas[h] == _palavra.PalavraAtual.Substring(i, 1))                       {
+                            letraExiste = true;
+                            colocarTraco = false;
+                            lbl_Palavra.Text += " " + _palavra.PalavraAtual.Substring(i, 1);
+                        }
                     }
-                }  
-                 if (colocarTraco)
-                {
-                    lbl_Palavra.Text += " _";
+                    if (colocarTraco)
+                    {
+                        lbl_Palavra.Text += " _";
+                        letraExiste = false;
+                    }
                 }
-
             }
+            if(!letraExiste)
+            {
+                imagemIndex++;
+                if(imagemIndex > 7)
+                {
+                    perdeu();
+                }
+                string caminhoImg = Directory.GetCurrentDirectory() + @"\Assets\forca" + Convert.ToString(imagemIndex)+".png";
+                Bitmap bitmap = new Bitmap(caminhoImg);
+                pontos--;
+                pictureForca.Image = bitmap;
+            }
+
+            letrasDigitadas[contador] = txt_DigitaLetra.Text.ToUpper();
             contador++;
+            lbl_pontos.Text = "Pontos: " + pontos;
         }
 
         private void txt_DigitaLetra_TextChanged(object sender, EventArgs e)
         {
             
+        }
+        private void perdeu()
+        {
+            button2.Enabled = false;
+            MessageBox.Show("Você perdeu;");
+        }
+
+        private void lbl_LetrasDigitadas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_dica_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void txt_DigitaLetra_KeyPress(object sender, KeyPressEventArgs e)

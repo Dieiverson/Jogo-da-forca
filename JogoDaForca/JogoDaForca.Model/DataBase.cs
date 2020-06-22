@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
+using System.IO;
 
 namespace JogoDaForca.Model
 {
@@ -17,7 +14,8 @@ namespace JogoDaForca.Model
 
         public DataBase()
         {
-            this.stringConnection = @"Data Source=C:\Users\Dieiverson\Documents\GitHub\Jogo-da-forca\JogoDaForca\JogoForca.db;Version=3;"; 
+            string caminho = "Data Source = "+Directory.GetCurrentDirectory() + @"/JogoForca.db;Version=3";
+            this.stringConnection = caminho; 
             conn = new SQLiteConnection(stringConnection);
 
         }

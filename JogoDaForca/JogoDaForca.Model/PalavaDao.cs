@@ -36,9 +36,9 @@ namespace JogoDaForca.Model
                 }
                 return _palavra;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                ex.Message.ToString();
                 throw new Exception("Erro ao localizar registro");
             }
             finally
